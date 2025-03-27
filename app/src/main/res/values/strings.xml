@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ハイハイスクールアドベンチャー</string>
+    <string name="prompt">&lt;動詞&gt; [&lt;目的語&gt;]で入力</string>
+    <string name="copyright">Copyright©1985 ZOBplus\nCopyright©2002–2022\t\tZOBplus hiro</string>
+    <string-array name="messages">
+        <item></item>
+        <item>そんな物まで拾うなんてあなたは暇ですねー。</item>
+        <item>そんな物は持っていません。</item>
+        <item>見ての通りです。べつに変わった所はありません。</item>
+        <item>そんなことでは、開きません。</item>
+        <item>このドアには、鍵は付いていませんよ。</item>
+        <item>こんなもの開けてどうするんですか？ なんの意味もありませんよ。</item>
+        <item>そんなとこ登ると危ないですよ。</item>
+        <item>固定されていて動かせません。体力の無駄ですね。</item>
+        <item>えっ！！誰と話すのですか？話し相手などはいませんよ。</item>
+        <item>ここでそんな物を使ってもなんの役にも立ちませんよ。</item>
+        <item>ここは一応県立高校ですから公共物破損罪で訴えられますよ。</item>
+        <item>それを見せたところで何も起こりませんよ。</item>
+        <item>逃げてばかりいないで問題を解決してください。</item>
+        <item>あなたはケンカ慣れしていません。下手に挑むと痛い目にあいますよ。</item>
+        <item>そんな物を付けてもゲームには何の関係もありませんよ。もっと有効的なことをしましょう。</item>
+        <item>あまり訳のわからない物を食べると腹をこわしますよ。</item>
+        <item>あまり変な物を飲むとあたりますよ。　</item>
+        <item>何を言っても意味がありませんよ。</item>
+        <item>作ろうにも材料がありませんよ。</item>
+        <item>そんな物あげてもあなたが損をするだけですよ。</item>
+        <item>そんな過激なことはやめて、もっと冷静に行動してください。</item>
+        <item>ネクタイ（ＮＥＣＫＴＩＥ）が落ちています。</item>
+        <item>制服（ＵＮＩＦＯＲＭ）が掛かっています。</item>
+        <item>鍵（ＫＥＹ）が置いてあります。</item>
+        <item>懐中電灯（ＬＩＧＨＴ）が落ちています。</item>
+        <item>電池（ＣＥＬＬ）があります。</item>
+        <item>ビデオテープ（ＴＡＰＥ）が落ちています。</item>
+        <item>ファイル（ＦＩＬＥ）が落ちています。</item>
+        <item>ダイナマイト（ＤＹＮＡＭＩＴＥ）が落ちています。</item>
+        <item>塩酸（ＨＣＬ）が置いてあります。</item>
+        <item>ジャッキ（ＪＡＣＫ）があります。</item>
+        <item>マッチ（ＭＡＴＣＨ）が置いてあります。</item>
+        <item>ペンチ（ＰＩＮＣＥＲＳ）がありました。</item>
+        <item>エンジ色のハイハイスクールのネクタイです。</item>
+        <item>ずいぶん大きな制服ですね。ＬＬサイズでしょうか？</item>
+        <item>ずいぶん錆ついた鍵ですね。</item>
+        <item>まだ使えますが電池が入っていません。</item>
+        <item>新品ではありませんがまだ使えそうです。</item>
+        <item>長い間人目に触れなかったらしくホコリまみれです。</item>
+        <item>たくさんのホコリをかぶっています。ずいぶん大切な物のようですね。</item>
+        <item>壁の一枚ぐらいは簡単にブットバせそうです。</item>
+        <item>まだだいぶ入っています。劇薬ですよ！</item>
+        <item>手軽に使えそうな道具です。</item>
+        <item>少し湿っていますが、一・二本は使えそうですよ。</item>
+        <item>錆ていますが使えそうですよ。</item>
+        <item>私はその名詞は理解できません。</item>
+        <item>もっとわかり易い動詞で入力してください。</item>
+        <item>私にはあなたの入力する言葉が理解できません。</item>
+        <item>ナニ？ ナニ？</item>
+        <item>意味のないこと言わないでください。</item>
+        <item>ナンだと。何言っていやがんでー！！</item>
+        <item>○○○先生の亡霊がこっちを睨んでいるゾ。はやく逃げないと・・・</item>
+        <item>あなたは○○○先生に捕まり四畳半の部屋に閉じ込められ、身包みはがされ、さんざん罵られ馬鹿にされたあげく、学校の外につまみだされてしまいました。
+		</item>
+        <item>そっちはいけないんだよー、知らなかったのか。</item>
+        <item>「ＰＵＬＬ Ｌ××××、ＣＵＴ Ｃ××××」と書いてあります。</item>
+        <item>持っていないものを読める訳ないでしょがあ。</item>
+        <item>塩酸は、こぼれてしまいました。</item>
+        <item>あなたはハイハイスクールの生徒と認められないので立ち入りを禁じるです。</item>
+        <item>あなたは男の子（ＢＯＹ）ですか？女の子（ＧＩＲＬ）ですか？（ここであまり悩まないように）</item>
+        <item>あなたはナンなんですか！？</item>
+        <item>あなたはハイハイスクールの生徒と証明できないので入れません。</item>
+        <item>わざわざ開くにおよびません。</item>
+        <item>持っていない物をどうしろというのですか。</item>
+        <item>電池が切れちまったんだよーん。</item>
+        <item>いかにもソフトをコピーしそうな先生です。</item>
+        <item>そこからは入れません。</item>
+        <item>出ることは不可能です。</item>
+        <item>テープを入れることが出来ません。</item>
+        <item>錆が取れました。</item>
+        <item>ずいぶん高いです。上に届きそうですよ。</item>
+        <item>放射能が漏れてきました。</item>
+        <item>あなたはハイハイスクールの危機を救いました！感謝します！</item>
+        <item>ハイハイスクールの校歌を歌います。</item>
+        <item>きさまそれでも軍人か。歯をくいしばれ！修正してやるうっ。－－ふりだしにもどる－－</item>
+        <item>あなたは大けがをしました。けがを治して始めから。</item>
+        <item>真っ暗闇です。どこへも行けません。</item>
+        <item>そんな物はありません。</item>
+        <item>屋上から落ちて、</item>
+        <item>ダイナマイトが爆発して、</item>
+        <item>鍵が掛かっていて開きません。</item>
+        <item>錆ついていて開きません。</item>
+        <item>ＤＡＴＡをＤＩＳＫへＳＡＶＥします。</item>
+        <item>ＤＡＴＡをＤＩＳＫからＬＯＡＤします。</item>
+        <item>ＦＩＬＥ Ｎｏ．（１，２，３）を ＩＮＰＵＴしてください。</item>
+        <item>ピアノを演奏します。</item>
+        <item>水が流れます。</item>
+        <item>鍵が開きました。</item>
+        <item>ダイナマイトが爆発しました。</item>
+        <item>電池の残りが少なくなってきました。</item>
+        <item>洞窟に穴が開きました。</item>
+        <item>ライトの明かりがつきました。</item>
+        <item>ダイナマイトに火がつきました。危険です！</item>
+        <item>ネクタイを締めたのでハイハイスクールの生徒として学校（ＳＣＨＯＯＬ）に入る事が出来ます。</item>
+        <item>制服を着たので立派なハイハイスクールの生徒です。</item>
+        <item>これを使えば重たい物を動かす事が出来ます。</item>
+        <item>ケーブル（ＣＡＢＬＥ）が引きちぎれてしまいました。</item>
+        <item>赤（ＲＥＤ）と黄色（ＹＥＬＬＯＷ）の、どちらのケーブルを切りますか？</item>
+        <item>あなたはまだ出られないのですか？</item>
+        <item>もーいー加減に終わりにしていいかな！</item>
+        <item>３年１組の教室を思い出して！</item>
+        <item>コピーをしてはいかーんっ！</item>
+        <item>ヒントに頼るのですか？だめですねーっ！</item>
+    </string-array>
+    <string name="game_start">ゲームを開始します。</string>
+    <string name="label_start">開始</string>
+    <string name="label_okay">了解</string>
+    <string name="label_cancel">取消</string>
+    <string-array name="dialog_gender">
+        <item>男子</item>
+        <item>女子</item>
+    </string-array>
+    <string-array name="dialog_file">
+        <item>#1</item>
+        <item>#2</item>
+        <item>#3</item>
+    </string-array>
+    <string-array name="dialog_cut_line">
+        <item>黄色い線</item>
+        <item>赤い線</item>
+    </string-array>
+    <string-array name="items">
+        <item>ネクタイ</item>
+        <item>制服</item>
+        <item>鍵</item>
+        <item>懐中電灯</item>
+        <item>乾電池</item>
+        <item>ビデオテープ</item>
+        <item>ファイル</item>
+        <item>ダイナマイト</item>
+        <item>塩酸</item>
+        <item>ジャッキ</item>
+        <item>マッチ</item>
+        <item>ペンチ</item>
+    </string-array>
+    <string name="title_gender">あなたの性別を教えて下さい</string>
+    <string name="title_file">ファイル番号を選択して下さい</string>
+    <string name="title_cut_line">どちらを切りますか？</string>
+    <string name="title_inventory">持ち物</string>
+    <string name="item_nothing">何も持っていません。</string>
+    <string name="msg_not_found">ダメ</string>
+    <string name="msg_okay">Ｏ.Ｋ.</string>
+    <string name="msg_gameover">ＧａｍｅＯｖｅｒ</string>
+    <string name="msg_finished">Ｆｉｎｉｓｈ</string>
+    <string name="msg_saved">データを保存しました。</string>
+    <string name="msg_loaded">データを読み込みました。</string>
+    <string name="msg_selected_fileno">番のファイルが選択されました。</string>
+    <string name="pref_playsound">音楽再生を行なう</string>
+    <string name="menu_label_prefs">設定</string>
+    <string name="mneu_label_help">ヘルプ</string>
+    <string name="menu_label_about">このプログラムについて</string>
+    <string name="pref_summary_playsound">ゲーム中で音楽を再生する。</string>
+    <string name="title_about">このプログラムについて</string>
+    <string name="msg_about">ハイハイスクールアドベンチャー\nVersion %1$s\n\nCopyright©1985
+		ZOBplus\nCopyright©2002-2022 ZOBPlus hiro</string>
+    <string-array name="opening_message">
+        <item> 2019年神奈山県立ハイ高等学校は</item>
+        <item>地盤が弱く校舎の老朽化も進んだため、</item>
+        <item>とうとう廃校にする以外方法がなく</item>
+        <item>なってしまった。</item>
+        <item></item>
+        <item></item>
+        <item> ところで大変な情報を手に入れた。</item>
+        <item> それは、</item>
+        <item></item>
+        <item>「ハイ高校にＡＴＯＭＩＣ ＢＯＭＢが仕掛けられている。」</item>
+        <item></item>
+        <item>と、いうものだ。</item>
+        <item> どうやらハイ高が廃校になった時、</item>
+        <item>気が狂った理科の先生がＡＴＯＭＩＣ ＢＯＭＢを</item>
+        <item>学校のどこかに仕掛けてしまったらしい。</item>
+        <item></item>
+        <item> お願いだ。我が母校のコナゴナになった</item>
+        <item>姿を見たくはない。</item>
+        <item>早くＡＴＯＭＩＣ ＢＯＭＢを取り除いてくれ……！！</item>
+        <item></item>
+        <item> 行動は英語で、&quot;&lt;動詞&gt;&quot; 或いは、&quot;&lt;動詞&gt; +
+			&lt;目的語&gt;&quot;のように入れていただきたい。</item>
+        <item> 例えば、&quot;look room&quot;と入れれば部屋の様子を見ることが出来るという訳だ。</item>
+        <item></item>
+        <item></item>
+        <item> それでは Ｇｏｏｄ Ｌｕｃｋ！！！............</item>
+    </string-array>
+    <string name="label_skip">スキップ</string>
+    <string name="pref_skip_opening">オープニング</string>
+    <string name="pref_summary_skip_opening">オープニングのメッセージを飛ばす。</string>
+    <string-array name="credit">
+        <item>ハイハイスクールアドベンチャー</item>
+        <item></item>
+        <item></item>
+        <item>Project ZOBPlus</item>
+        <item></item>
+        <item> Hayami &lt;hayami@zob.jp&gt;</item>
+        <item> Exit &lt;exit@zob.jp&gt;</item>
+        <item> ezumi &lt;ezumi@zob.jp&gt;</item>
+        <item> Ogu &lt;ogu@zob.jp&gt;</item>
+        <item> neopara &lt;neopara@zob.jp&gt;</item>
+        <item> hiro &lt;hiro@zob.jp&gt;</item>
+        <item></item>
+        <item>PalmOS version: hiro©2002</item>
+        <item></item>
+        <item>--- Original Staff ---</item>
+        <item></item>
+        <item>Directed By HIRONOBU NAKAGUCHI</item>
+        <item>Graphic Designers:</item>
+        <item> NOBUKO YANAGITA</item>
+        <item> YUMIKO HOSONO</item>
+        <item> HIRONOBU NAKAGUCHI</item>
+        <item> TOSHIHIKO YANAGITA</item>
+        <item> TOHRU OHYAMA</item>
+        <item> MASANORI ISHII</item>
+        <item> YASUSHI SHIGEHARA</item>
+        <item> HIDETOSHI SUZUKI</item>
+        <item> TATSUYA UCHIBORI</item>
+        <item> MASAKI NOZAWA</item>
+        <item> TOMOKO OHKAWA</item>
+        <item> FUMIKAZU SHIRATSUCHI</item>
+        <item> YASUNORI YAMADA</item>
+        <item> MUNENORI TAKIMOTO</item>
+        <item></item>
+        <item>Message Converters:</item>
+        <item> TATSUYA UCHIBORI</item>
+        <item> HIDETOSHI SUZUKI</item>
+        <item> YASUSHI SHIGEHARA</item>
+        <item> YASUNORI YAMADA</item>
+        <item></item>
+        <item>Floppy Disk Converters:</item>
+        <item> HIRONOBU NAKAGUCHI</item>
+        <item></item>
+        <item>Music:</item>
+        <item> MASAO MIZOBE</item>
+        <item>Special Thanks To:</item>
+        <item> HIROSHI YAMAMOTO</item>
+        <item> TAKAYOSHI KASHIWAGI</item>
+        <item></item>
+        <item>Cooperate with:</item>
+        <item> Furniture KASHIWAGI</item>
+        <item>ZAMA HIGH SCHOOL MICRO COMPUTER CIRCLE</item>
+        <item></item>
+        <item>Android version: hiro © 2011-2022</item>
+        <item></item>
+    </string-array>
+    <string name="pref_follow_silent_mode">マナーモードを優先する</string>
+    <string name="pref_summary_follow_silent_mode">マナーモード時にはサウンド設定に関わらず音を鳴らさない</string>
+    <string name="pref_use_tiling">塗りつぶしにタイリングを使う</string>
+    <string name="pref_summary_use_tiling">中間色ではなく、タイリングで塗る。オリジナルテイスト。</string>
+    <string name="msg_tap_screen_to_start">絵をタップするとスタートします。</string>
+    <string name="msg_tap_screen_to_title">絵をタップするとタイトル画面に戻ります。</string>
+    <string name="progress_dialog_msg">データを読み込んでいます。</string>
+    <string name="label_prompt_recognizer">コマンドを英語でどうぞ。</string>
+    <string name="pref_recognizer_language">音声認識</string>
+    <string name="pref_summary_recognizer_language">音声認識に使う英語の設定</string>
+    <string-array name="pref_recognizer_language_items">
+        <item>米語</item>
+        <item>英語</item>
+    </string-array>
+    <string-array name="pref_recognizer_language_items_value">
+        <item>US</item>
+        <item>UK</item>
+    </string-array>
+    <string name="msg_please_tap">絵をタップして下さい。</string>
+    <string name="err_file_not_found">データファイル%dがありません。</string>
+    <string-array name="pref_data_location">
+        <item>本体メモリ</item>
+        <item>SDカード</item>
+    </string-array>
+    <string-array name="pref_data_location_value">
+        <item>MEMORY</item>
+        <item>SDCARD</item>
+    </string-array>
+    <string name="pref_label_data_location">データの保存先</string>
+    <string name="pref_summary_data_location">データの保存先の選択</string>
+    <string name="pref_label_use_cloud">クラウドへの保存</string>
+    <string name="pref_summary_use_cloud">クラウドへデータを保存するかしないか選択。</string>
+    <string name="pref_summary_use_cloud_on">データをクラウドに保存する。</string>
+    <string name="pref_summary_use_cloud_off">クラウドにデータを保存しない。</string>
+    <string name="pref_category_data">データの保存に関して</string>
+    <string name="pref_category_sound">音に関する設定</string>
+    <string name="pref_catetory_game">ゲームに関する設定</string>
+    <string name="pref_summary_skip_opening_off">オープニングのメッセージを飛ばさない。</string>
+    <string name="pref_summary_playsound_off">ゲーム中で音楽再生をしない。</string>
+    <string name="pref_summary_follow_silent_mode_on">マナーモード優先</string>
+    <string name="pref_summary_follow_silent_mode_off">マナーモードを無視する。</string>
+    <string name="pref_summary_use_tiling_on">タイリング使用ーオリジナルテイスト。</string>
+    <string name="pref_summary_use_tiling_off">中間色使用。</string>
+    <string name="version">1.01</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="title_activity_settings">設定</string>
+</resources>

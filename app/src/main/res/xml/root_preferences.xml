@@ -1,0 +1,61 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="@string/pref_category_sound">
+
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="playSounds"
+            android:title="@string/pref_playsound"
+            app:summaryOff="@string/pref_summary_playsound_off"
+            app:summaryOn="@string/pref_summary_playsound" />
+        <SwitchPreference
+            android:defaultValue="true"
+            android:key="prefFollowSilent"
+            android:title="@string/pref_follow_silent_mode"
+            app:summaryOff="@string/pref_summary_follow_silent_mode_off"
+            app:summaryOn="@string/pref_summary_follow_silent_mode_on" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="@string/pref_catetory_game">
+
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="prefSkipOpening"
+            android:title="@string/pref_skip_opening"
+            app:summaryOff="@string/pref_summary_skip_opening_off"
+            app:summaryOn="@string/pref_summary_skip_opening"
+            app:switchTextOff="@string/pref_summary_skip_opening_off"
+            app:switchTextOn="@string/pref_summary_skip_opening" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="prefUseTiling"
+            android:title="@string/pref_use_tiling"
+            app:summaryOff="@string/pref_summary_use_tiling_off"
+            app:summaryOn="@string/pref_summary_use_tiling_on" />
+        <ListPreference
+            android:defaultValue="US"
+            android:entries="@array/pref_recognizer_language_items"
+            android:entryValues="@array/pref_recognizer_language_items_value"
+            android:key="prefRecEnglish"
+            android:title="@string/pref_recognizer_language"
+            app:useSimpleSummaryProvider="true" />
+    </PreferenceCategory>
+
+    <PreferenceCategory android:title="@string/pref_category_data">
+
+        <ListPreference
+            android:defaultValue="MEMORY"
+            android:entries="@array/pref_data_location"
+            android:entryValues="@array/pref_data_location_value"
+            android:key="pref_use_sdcard"
+            android:title="@string/pref_label_data_location"
+            app:useSimpleSummaryProvider="true" />
+        <SwitchPreference
+            android:defaultValue="false"
+            android:key="pref_use_cloud"
+            android:title="@string/pref_label_use_cloud"
+            app:summaryOff="@string/pref_summary_use_cloud_off"
+            app:summaryOn="@string/pref_summary_use_cloud_on" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

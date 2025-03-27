@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+	<item android:id="@+id/menu_item_prefs" android:title="@string/menu_label_prefs"
+		android:icon="@android:drawable/ic_menu_preferences"></item>
+	<item android:id="@+id/menu_item_help" android:title="@string/mneu_label_help"
+		android:icon="@android:drawable/ic_menu_help">
+	<menu>
+		<item android:id="@+id/menu_item_about" android:title="@string/menu_label_about" android:icon="@android:drawable/ic_menu_info_details"></item>
+	</menu>
+	</item>
+</menu>
