@@ -1,0 +1,5 @@
+build/
+captures/
+app/.cxx/
+app/build/
+app/release/

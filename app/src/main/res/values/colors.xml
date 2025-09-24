@@ -4,7 +4,33 @@
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
     <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_500">#FF02B0A5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+        <!-- ダークテーマで上書きする可能性のあるその他の色 -->
+    <color name="my_surface_variant_light">#FFE0E0E0</color> <!-- 例: ライトテーマの Surface Variant -->
+    <color name="my_on_surface_light">#FF212121</color> <!-- Secondary も同様に調整されることがあるが、そのままでも良い場合もある -->
+        <!-- colorOnSecondary も多くの場合 @color/black になる -->
+
+
+        <!-- Material Design のダークテーマの原則に従った例 -->
+        <!-- ライトテーマの @color/purple_500 (Primary) は、ダークテーマではより彩度が低く明るい色になることが多い -->
+        <!-- 例えば、ダークテーマでは Primary を ライトテーマの purple_200 に寄せることが推奨される -->
+    <color name="purple_500_dark">@color/purple_200</color> <!-- 例: purple_500 をダーク用に再定義 -->
+    <color name="color_on_primary_dark">@color/black</color> <!-- 例: colorOnPrimary をダーク用に再定義 -->
+
+    <color name="teal_200_dark">@color/teal_200</color>   <!-- Secondary はそのままでも可 -->
+    <color name="color_on_secondary_dark">@color/black</color>
+
+
+        <!-- FontSizeInlinePreference で使用していた色をダークテーマ用に調整 -->
+        <!-- 例: ダークテーマでは選択されたボタンの背景を Primary (明るめ) にし、文字を黒に -->
+        <!-- 例: 選択されていないボタンの背景を暗めのグレーにし、文字を明るいグレーに -->
+    <color name="my_surface_variant_dark">#FF424242</color> <!-- 例: ダークテーマの Surface Variant -->
+    <color name="my_on_surface_dark">#FFE0E0E0</color>
+
+    <color name="hhsadv_title_bar">#FFC0C0C0</color>
+    <color name="hhsadv_hilite_color">#ff03d6c1</color>
 </resources>

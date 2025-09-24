@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">ハイハイスクールアドベンチャー</string>
     <string name="prompt">&lt;動詞&gt; [&lt;目的語&gt;]で入力</string>
-    <string name="copyright">Copyright©1985 ZOBplus\nCopyright©2002–2022\t\tZOBplus hiro</string>
+    <string name="copyright">Copyright©1985 ZOBplus\nCopyright©2002–2025\t\tZOBplus hiro</string>
     <string-array name="messages">
         <item></item>
         <item>そんな物まで拾うなんてあなたは暇ですねー。</item>
@@ -159,94 +159,12 @@
     <string name="pref_summary_playsound">ゲーム中で音楽を再生する。</string>
     <string name="title_about">このプログラムについて</string>
     <string name="msg_about">ハイハイスクールアドベンチャー\nVersion %1$s\n\nCopyright©1985
-		ZOBplus\nCopyright©2002-2022 ZOBPlus hiro</string>
-    <string-array name="opening_message">
-        <item> 2019年神奈山県立ハイ高等学校は</item>
-        <item>地盤が弱く校舎の老朽化も進んだため、</item>
-        <item>とうとう廃校にする以外方法がなく</item>
-        <item>なってしまった。</item>
-        <item></item>
-        <item></item>
-        <item> ところで大変な情報を手に入れた。</item>
-        <item> それは、</item>
-        <item></item>
-        <item>「ハイ高校にＡＴＯＭＩＣ ＢＯＭＢが仕掛けられている。」</item>
-        <item></item>
-        <item>と、いうものだ。</item>
-        <item> どうやらハイ高が廃校になった時、</item>
-        <item>気が狂った理科の先生がＡＴＯＭＩＣ ＢＯＭＢを</item>
-        <item>学校のどこかに仕掛けてしまったらしい。</item>
-        <item></item>
-        <item> お願いだ。我が母校のコナゴナになった</item>
-        <item>姿を見たくはない。</item>
-        <item>早くＡＴＯＭＩＣ ＢＯＭＢを取り除いてくれ……！！</item>
-        <item></item>
-        <item> 行動は英語で、&quot;&lt;動詞&gt;&quot; 或いは、&quot;&lt;動詞&gt; +
-			&lt;目的語&gt;&quot;のように入れていただきたい。</item>
-        <item> 例えば、&quot;look room&quot;と入れれば部屋の様子を見ることが出来るという訳だ。</item>
-        <item></item>
-        <item></item>
-        <item> それでは Ｇｏｏｄ Ｌｕｃｋ！！！............</item>
-    </string-array>
+		ZOBplus\nCopyright©2002-2025 ZOBPlus hiro</string>
+
     <string name="label_skip">スキップ</string>
     <string name="pref_skip_opening">オープニング</string>
     <string name="pref_summary_skip_opening">オープニングのメッセージを飛ばす。</string>
-    <string-array name="credit">
-        <item>ハイハイスクールアドベンチャー</item>
-        <item></item>
-        <item></item>
-        <item>Project ZOBPlus</item>
-        <item></item>
-        <item> Hayami &lt;hayami@zob.jp&gt;</item>
-        <item> Exit &lt;exit@zob.jp&gt;</item>
-        <item> ezumi &lt;ezumi@zob.jp&gt;</item>
-        <item> Ogu &lt;ogu@zob.jp&gt;</item>
-        <item> neopara &lt;neopara@zob.jp&gt;</item>
-        <item> hiro &lt;hiro@zob.jp&gt;</item>
-        <item></item>
-        <item>PalmOS version: hiro©2002</item>
-        <item></item>
-        <item>--- Original Staff ---</item>
-        <item></item>
-        <item>Directed By HIRONOBU NAKAGUCHI</item>
-        <item>Graphic Designers:</item>
-        <item> NOBUKO YANAGITA</item>
-        <item> YUMIKO HOSONO</item>
-        <item> HIRONOBU NAKAGUCHI</item>
-        <item> TOSHIHIKO YANAGITA</item>
-        <item> TOHRU OHYAMA</item>
-        <item> MASANORI ISHII</item>
-        <item> YASUSHI SHIGEHARA</item>
-        <item> HIDETOSHI SUZUKI</item>
-        <item> TATSUYA UCHIBORI</item>
-        <item> MASAKI NOZAWA</item>
-        <item> TOMOKO OHKAWA</item>
-        <item> FUMIKAZU SHIRATSUCHI</item>
-        <item> YASUNORI YAMADA</item>
-        <item> MUNENORI TAKIMOTO</item>
-        <item></item>
-        <item>Message Converters:</item>
-        <item> TATSUYA UCHIBORI</item>
-        <item> HIDETOSHI SUZUKI</item>
-        <item> YASUSHI SHIGEHARA</item>
-        <item> YASUNORI YAMADA</item>
-        <item></item>
-        <item>Floppy Disk Converters:</item>
-        <item> HIRONOBU NAKAGUCHI</item>
-        <item></item>
-        <item>Music:</item>
-        <item> MASAO MIZOBE</item>
-        <item>Special Thanks To:</item>
-        <item> HIROSHI YAMAMOTO</item>
-        <item> TAKAYOSHI KASHIWAGI</item>
-        <item></item>
-        <item>Cooperate with:</item>
-        <item> Furniture KASHIWAGI</item>
-        <item>ZAMA HIGH SCHOOL MICRO COMPUTER CIRCLE</item>
-        <item></item>
-        <item>Android version: hiro © 2011-2022</item>
-        <item></item>
-    </string-array>
+
     <string name="pref_follow_silent_mode">マナーモードを優先する</string>
     <string name="pref_summary_follow_silent_mode">マナーモード時にはサウンド設定に関わらず音を鳴らさない</string>
     <string name="pref_use_tiling">塗りつぶしにタイリングを使う</string>
@@ -290,7 +208,7 @@
     <string name="pref_summary_follow_silent_mode_off">マナーモードを無視する。</string>
     <string name="pref_summary_use_tiling_on">タイリング使用ーオリジナルテイスト。</string>
     <string name="pref_summary_use_tiling_off">中間色使用。</string>
-    <string name="version">1.01</string>
+    <string name="version">1.21</string>
     <!-- Preference Titles -->
     <string name="messages_header">Messages</string>
     <string name="sync_header">Sync</string>
@@ -306,4 +224,8 @@
     </string>
     <string name="attachment_summary_off">Only download attachments when manually requested</string>
     <string name="title_activity_settings">設定</string>
+    <string name="title_activity_scrolling">ScrollingActivity</string>
+
+    <string name="pref_screen_settings">画面の設定</string>
+    <string name="pref_font_size">テキストの大きさ</string>
 </resources>

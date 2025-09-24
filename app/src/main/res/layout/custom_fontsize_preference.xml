@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minHeight="?android:attr/listPreferredItemHeightSmall"
+    android:gravity="center_vertical"
+    android:paddingStart="?android:attr/listPreferredItemPaddingStart"
+    android:paddingEnd="?android:attr/listPreferredItemPaddingEnd"
+    android:background="?android:attr/selectableItemBackground"
+    android:orientation="horizontal">
+
+    <!-- アイコン表示領域 (実際にはアイコンを表示しないのでスペースだけ確保) -->
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:minWidth="56dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:visibility="visible"
+        android:id="@android:id/icon_frame">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@android:id/icon"
+            android:scaleType="centerInside"
+            android:adjustViewBounds="true"
+            android:maxWidth="48dp"
+            android:maxHeight="48dp" />
+
+        <!-- android:layout_marginStart や android:layout_marginEnd で調整も可 -->
+        <!-- ここに ImageView (@android:id/icon) を置くこともできるが、使わないなら FrameLayout だけでOK -->
+        <!-- minWidth は標準的なアイコン領域の幅に近い値。テーマによって異なるので調整が必要な場合も。-->
+        <!-- もしアイコンを将来的に表示する可能性があるなら ImageView を入れておく。
+         visibility=gone にしておき、必要に応じて表示するなど。-->
+    </LinearLayout>
+    <!-- タイトルとボタン群のコンテナ (RelativeLayout や LinearLayout vertical) -->
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <!-- android:paddingStart="16dp" --> <!-- アイコン領域との間に少しスペース -->
+
+        <TextView
+            android:id="@android:id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceListItem"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp" />
+
+        <LinearLayout
+            android:id="@+id/fontSizeContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp"
+            android:orientation="horizontal">
+            <!-- ここにプログラムでボタンが追加されます -->
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

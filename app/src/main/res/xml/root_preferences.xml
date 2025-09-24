@@ -58,4 +58,13 @@
             app:summaryOn="@string/pref_summary_use_cloud_on" />
     </PreferenceCategory>
 
+    <PreferenceCategory android:title="@string/pref_screen_settings"
+        app:allowDividerBelow="false">
+        <jp.wildtree.android.apps.hhsadvrev.FontSizeInlinePreference
+            android:key="prefFontSize"
+            android:title="@string/pref_font_size"
+            android:defaultValue="16"
+            app:iconSpaceReserved="true"/>
+    </PreferenceCategory>
+
 </PreferenceScreen>

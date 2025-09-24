@@ -4,15 +4,15 @@ plugins {
 }
 
 android {
-    compileSdk 35
+    compileSdk = 36
 
     defaultConfig {
         applicationId "jp.wildtree.android.apps.hhsadvrev"
-        minSdkVersion 29
+        minSdkVersion 33
         //noinspection EditedTargetSdkVersion
-        targetSdkVersion 35
+        targetSdkVersion 36
         versionCode 1
-        versionName "1.01"
+        versionName "1.21"
 
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
@@ -27,26 +27,32 @@ android {
         }
     }
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_11
-        targetCompatibility JavaVersion.VERSION_11
+        sourceCompatibility JavaVersion.VERSION_21
+        targetCompatibility JavaVersion.VERSION_21
     }
     externalNativeBuild {
         cmake {
             path file('src/main/jni/CMakeLists.txt')
         }
     }
-    ndkVersion '22.1.7171670'
+    ndkVersion '28.2.13676358'
     namespace 'jp.wildtree.android.apps.hhsadvrev'
     buildToolsVersion '36.0.0'
+    buildFeatures {
+        viewBinding true
+    }
 }
 
 dependencies {
 
-    implementation 'androidx.appcompat:appcompat:1.7.0'
-    implementation 'com.google.android.material:material:1.12.0'
+    implementation 'androidx.appcompat:appcompat:1.7.1'
+    implementation 'com.google.android.material:material:1.13.0'
     implementation 'androidx.constraintlayout:constraintlayout:2.2.1'
     implementation 'androidx.preference:preference-ktx:1.2.1'
+    implementation 'androidx.activity:activity-ktx:1.11.0'
+    implementation 'androidx.recyclerview:recyclerview:1.4.0'
+    implementation 'com.google.android.material:material:1.13.0' // 例: 1.13.0 は現在の最新バージョンの一つ
     testImplementation 'junit:junit:4.13.2'
-    androidTestImplementation 'androidx.test.ext:junit:1.2.1'
-    androidTestImplementation 'androidx.test.espresso:espresso-core:3.6.1'
+    androidTestImplementation 'androidx.test.ext:junit:1.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.7.0'
 }

@@ -29,7 +29,7 @@ gpset(AndroidBitmapInfo info, unsigned char *pixels, int x, int y, unsigned char
 	*pixels++ = r;
 	*pixels++ = g;
 	*pixels++ = b;
-	*pixels++ = a;
+	*pixels = a;
 }
 
 int
@@ -37,11 +37,12 @@ gpget(AndroidBitmapInfo info, unsigned char *pixels, int x, int y)
 {
 	int i, c = 0;
 	unsigned char r, g, b, a;
+    if (y >= info.height || y < 0 || x >= info.width || x < 0) return -1;
 	pixels += info.stride * y + 4 * x;
 	r = *pixels++;
 	g = *pixels++;
 	b = *pixels++;
-	a = *pixels++;
+	a = *pixels;
 	c = (a << 24) | (r << 16) | (g << 8) | b;
 
 	return c;
@@ -175,21 +176,22 @@ add(Fifo *fifo, int x, int y)
 	}
 }
 
+int
+isEmpty(Fifo *fifo)
+{
+    return fifo->head == fifo->tail;
+}
+
 Point
 get(Fifo *fifo)
 {
+    //if (isEmpty(fifo)) return NULL;
 	Point p = fifo->point[(fifo->head)++];
 	if (fifo->head == FIFO_SIZE)
 	{
 		fifo->head = 0;
 	}
 	return p;
-}
-
-int
-isEmpty(Fifo *fifo)
-{
-	return fifo->head == fifo->tail;
 }
 
 void
@@ -307,14 +309,14 @@ void
 Java_jp_wildtree_android_apps_hhsadvrev_ZGraphicDrawable_gtonepaint(JNIEnv *env, jobject thiz, jobject bitmap, jbyteArray tone, jboolean tiling)
 {
 	int p, n, i, j, x, y, wx, wy;
-	int r, g, b, c, cc, ci;
+	u_int r, g, b, c, cc, ci;
 	int mask, bit;
 	jbyte *tonep;
 	jboolean is_copy;
 	AndroidBitmapInfo info;
 	unsigned char *   pixels;
 	int               ret;
-	int pat[][3] = {
+	u_int pat[][3] = {
 			{0x00, 0x00, 0x00},
 			{0xff, 0x00, 0x00},
 			{0x00, 0xff, 0x00},
@@ -324,7 +326,7 @@ Java_jp_wildtree_android_apps_hhsadvrev_ZGraphicDrawable_gtonepaint(JNIEnv *env,
 			{0x00, 0xff, 0xff},
 			{0xff, 0xff, 0xff},
 	};
-	int col[] = {
+	u_int col[] = {
 			0xff000000,
 			0xff0000ff,
 			0xffff0000,

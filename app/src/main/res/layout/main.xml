@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+	android:layout_width="fill_parent"
+	android:layout_height="fill_parent"
+	android:fitsSystemWindows="true"
+	android:orientation="vertical">
+
+	<androidx.appcompat.widget.Toolbar
+		android:id="@+id/toolbar"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/hhsadv_title_bar"
+		android:minHeight="?attr/actionBarSize"
+		android:theme="?attr/actionBarTheme"
+		android:visibility="visible" />
+
+	<ImageView
+		android:id="@+id/basicScreenView"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:layout_gravity="center_vertical|center_horizontal|center"
+		android:adjustViewBounds="true"
+		android:clickable="true"
+		android:contentDescription="TODO"
+		android:scrollbars="none" />
+
+	<LinearLayout
+		android:id="@+id/HActionBox"
+		android:layout_width="fill_parent"
+		android:layout_height="wrap_content"
+		android:orientation="horizontal">
+
+		<ImageButton
+			android:id="@+id/btnSpeak"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:contentDescription="TODO"
+			android:src="@android:drawable/ic_btn_speak_now" />
+
+		<EditText
+			android:id="@+id/cmdline"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:hint="@string/prompt"
+			android:imeOptions="actionGo"
+			android:importantForAutofill="no"
+			android:inputType="text"
+			android:minHeight="48dp"
+			android:singleLine="true"
+			android:textSize="16sp" />
+	</LinearLayout>
+
+	<ScrollView
+		android:id="@+id/scrollBox"
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent"
+		android:scrollbars="vertical">
+
+		<TextView
+			android:id="@+id/messageBox"
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_marginHorizontal="2dp"
+			android:text="@string/copyright" />
+	</ScrollView>
+
+	<ProgressBar
+		android:id="@+id/progressBar"
+		style="?android:attr/progressBarStyleHorizontal"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content" />
+</LinearLayout>
