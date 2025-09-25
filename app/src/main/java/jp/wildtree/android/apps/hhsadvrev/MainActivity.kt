@@ -480,6 +480,27 @@ class MainActivity : AppCompatActivity() {
         starting = false
         cleared = false
 
+        val start: () -> Unit = {
+            val edit = findViewById<EditText>(id.cmdline)
+            edit.visibility = View.VISIBLE
+            edit.isEnabled = true
+            edit.setFocusable(true)
+            edit.isFocusableInTouchMode = true
+            val btnSpeak = findViewById<ImageButton>(id.btnSpeak)
+            btnSpeak.visibility = View.VISIBLE
+            btnSpeak.isEnabled = true
+
+            userData = ZUserData(initData!!)
+
+            iv!!.clearColorFilter()
+            cfMode = 0
+            zSystem!!.mapId(START_PAGE)
+            gameover = false
+            mbuffer!!.clear()
+            msgflush()
+            draw(true)
+        }
+
         if (!sp!!.getBoolean("prefSkipOpening", false)) {
             val i = Intent(mContext, ZCreditRollActivity::class.java)
             i.flags = Intent.FLAG_ACTIVITY_NEW_TASK
@@ -490,26 +511,9 @@ class MainActivity : AppCompatActivity() {
                 android.R.anim.fade_out
             )
             startActivity(i, o.toBundle())
-            onResumeOnce.add {
-                val edit = findViewById<EditText>(id.cmdline)
-                edit.visibility = View.VISIBLE
-                edit.isEnabled = true
-                edit.setFocusable(true)
-                edit.isFocusableInTouchMode = true
-                val btnSpeak = findViewById<ImageButton>(id.btnSpeak)
-                btnSpeak.visibility = View.VISIBLE
-                btnSpeak.isEnabled = true
-
-                userData = ZUserData(initData!!)
-
-                iv!!.clearColorFilter()
-                cfMode = 0
-                zSystem!!.mapId(START_PAGE)
-                gameover = false
-                mbuffer!!.clear()
-                msgflush()
-                draw(true)
-            }
+            onResumeOnce.add(start)
+        } else {
+            start()
         }
 
     }
