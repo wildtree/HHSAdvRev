@@ -99,6 +99,8 @@ class MainActivity : AppCompatActivity() {
     private var loader: Thread? = null
     private var signal: CountDownLatch? = null
 
+    private var redraw_on_resume = true
+
     private val prefKeyPlaysounds = "playSounds"
 
     @SuppressLint("DefaultLocale")
@@ -330,6 +332,7 @@ class MainActivity : AppCompatActivity() {
         val fontSize = sp!!.getInt("prefFontSize", 16)
         tv!!.textSize = fontSize.toFloat()
         //overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+        if (!redraw_on_resume) return
         if (!starting && !cleared)
         {
             val edit = findViewById<EditText>(id.cmdline)
@@ -359,6 +362,7 @@ class MainActivity : AppCompatActivity() {
             gameEnding()
             draw(false)
         }
+        redraw_on_resume = false
     }
 
     fun initData(fresh: Boolean) {
@@ -515,6 +519,7 @@ class MainActivity : AppCompatActivity() {
                 android.R.anim.fade_out
             )
             startActivity(i, o.toBundle())
+            redraw_on_resume = true
         }
 
     }
@@ -1038,6 +1043,7 @@ class MainActivity : AppCompatActivity() {
             android.R.anim.fade_out
         )
         startActivity(i, o.toBundle())
+        redraw_on_resume = true
     }
 
     private fun interpreter() {
