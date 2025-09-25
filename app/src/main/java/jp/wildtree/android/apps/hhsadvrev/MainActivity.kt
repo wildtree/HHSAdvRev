@@ -98,9 +98,6 @@ class MainActivity : AppCompatActivity() {
     private var mHandler: Handler? = null
     private var loader: Thread? = null
     private var signal: CountDownLatch? = null
-
-    private var redraw_on_resume = true
-
     private val prefKeyPlaysounds = "playSounds"
 
     @SuppressLint("DefaultLocale")
@@ -326,43 +323,17 @@ class MainActivity : AppCompatActivity() {
         Log.w("LifecycleTrace", "availMem=${memInfo.availMem} lowMemory=${memInfo.lowMemory} threshold=${memInfo.threshold}")
 
     }
-
+    private val onResumeOnce: ArrayList<()->Unit> = ArrayList<()->Unit>()
     override fun onResume() {
         super.onResume()
         val fontSize = sp!!.getInt("prefFontSize", 16)
         tv!!.textSize = fontSize.toFloat()
         //overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
-        if (!redraw_on_resume) return
-        if (!starting && !cleared)
-        {
-            val edit = findViewById<EditText>(id.cmdline)
-            edit.visibility = View.VISIBLE
-            edit.isEnabled = true
-            edit.setFocusable(true)
-            edit.isFocusableInTouchMode = true
-            val btnSpeak = findViewById<ImageButton>(id.btnSpeak)
-            btnSpeak.visibility = View.VISIBLE
-            btnSpeak.isEnabled = true
-
-            userData = ZUserData(initData!!)
-
-            iv!!.clearColorFilter()
-            cfMode = 0
-            zSystem!!.mapId(START_PAGE)
-            gameover = false
-            mbuffer!!.clear()
-            msgflush()
-            draw(true)
+        if (onResumeOnce.isEmpty()) return;
+        for (f in onResumeOnce) {
+            f()
         }
-        else if (cleared)
-        {
-            setColorFilter(MainActivity.CF_MODE_NORMAL)
-            msgByResId(R.string.msg_finished)
-            msgByResId(string.msg_tap_screen_to_title)
-            gameEnding()
-            draw(false)
-        }
-        redraw_on_resume = false
+        onResumeOnce.clear()
     }
 
     fun initData(fresh: Boolean) {
@@ -519,7 +490,26 @@ class MainActivity : AppCompatActivity() {
                 android.R.anim.fade_out
             )
             startActivity(i, o.toBundle())
-            redraw_on_resume = true
+            onResumeOnce.add {
+                val edit = findViewById<EditText>(id.cmdline)
+                edit.visibility = View.VISIBLE
+                edit.isEnabled = true
+                edit.setFocusable(true)
+                edit.isFocusableInTouchMode = true
+                val btnSpeak = findViewById<ImageButton>(id.btnSpeak)
+                btnSpeak.visibility = View.VISIBLE
+                btnSpeak.isEnabled = true
+
+                userData = ZUserData(initData!!)
+
+                iv!!.clearColorFilter()
+                cfMode = 0
+                zSystem!!.mapId(START_PAGE)
+                gameover = false
+                mbuffer!!.clear()
+                msgflush()
+                draw(true)
+            }
         }
 
     }
@@ -1043,7 +1033,13 @@ class MainActivity : AppCompatActivity() {
             android.R.anim.fade_out
         )
         startActivity(i, o.toBundle())
-        redraw_on_resume = true
+        onResumeOnce.add {
+            setColorFilter(MainActivity.CF_MODE_NORMAL)
+            msgByResId(R.string.msg_finished)
+            msgByResId(string.msg_tap_screen_to_title)
+            gameEnding()
+            draw(false)
+        }
     }
 
     private fun interpreter() {
