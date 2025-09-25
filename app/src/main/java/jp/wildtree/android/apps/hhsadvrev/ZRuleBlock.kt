@@ -168,8 +168,8 @@ class ZRuleBlock(b: ByteArray) {
 
                     2 -> {
                         main.endRoll()
-                        main.setColorFilter(MainActivity.CF_MODE_NORMAL)
-                        main.msgByResId(R.string.msg_finished)
+                        //main.setColorFilter(MainActivity.CF_MODE_NORMAL)
+                        //main.msgByResId(R.string.msg_finished)
                         main.gameCleared()
                         return false
                     }

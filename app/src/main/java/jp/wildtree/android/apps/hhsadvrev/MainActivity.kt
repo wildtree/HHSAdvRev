@@ -330,6 +330,35 @@ class MainActivity : AppCompatActivity() {
         val fontSize = sp!!.getInt("prefFontSize", 16)
         tv!!.textSize = fontSize.toFloat()
         //overridePendingTransition(android.R.anim.fade_in, android.R.anim.fade_out)
+        if (!starting && !cleared)
+        {
+            val edit = findViewById<EditText>(id.cmdline)
+            edit.visibility = View.VISIBLE
+            edit.isEnabled = true
+            edit.setFocusable(true)
+            edit.isFocusableInTouchMode = true
+            val btnSpeak = findViewById<ImageButton>(id.btnSpeak)
+            btnSpeak.visibility = View.VISIBLE
+            btnSpeak.isEnabled = true
+
+            userData = ZUserData(initData!!)
+
+            iv!!.clearColorFilter()
+            cfMode = 0
+            zSystem!!.mapId(START_PAGE)
+            gameover = false
+            mbuffer!!.clear()
+            msgflush()
+            draw(true)
+        }
+        else if (cleared)
+        {
+            setColorFilter(MainActivity.CF_MODE_NORMAL)
+            msgByResId(R.string.msg_finished)
+            msgByResId(string.msg_tap_screen_to_title)
+            gameEnding()
+            draw(false)
+        }
     }
 
     fun initData(fresh: Boolean) {
@@ -347,7 +376,6 @@ class MainActivity : AppCompatActivity() {
             zSystem!!.mapId(TITLE_PAGE)
 
             mHandler!!.post {
-                // TODO �����������ꂽ���\�b�h�E�X�^�u
                 titleScreen()
                 mapManager.mapId = TITLE_PAGE
                 mapManager.mapData!!.draw(zg!!)
@@ -488,24 +516,7 @@ class MainActivity : AppCompatActivity() {
             )
             startActivity(i, o.toBundle())
         }
-        val edit = findViewById<EditText>(id.cmdline)
-        edit.visibility = View.VISIBLE
-        edit.isEnabled = true
-        edit.setFocusable(true)
-        edit.isFocusableInTouchMode = true
-        val btnSpeak = findViewById<ImageButton>(id.btnSpeak)
-        btnSpeak.visibility = View.VISIBLE
-        btnSpeak.isEnabled = true
 
-        userData = ZUserData(initData!!)
-
-        iv!!.clearColorFilter()
-        cfMode = 0
-        zSystem!!.mapId(START_PAGE)
-        gameover = false
-        mbuffer!!.clear()
-        msgflush()
-        draw(true)
     }
 
     private fun readInitUserData() {
@@ -686,9 +697,9 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun gameCleared() {
-        msgByResId(string.msg_tap_screen_to_title)
+        //msgByResId(string.msg_tap_screen_to_title)
         cleared = true
-        gameEnding()
+        //gameEnding()
     }
 
     private fun progress() {
@@ -747,7 +758,6 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun draw(withmsg: Boolean) {
-        // �`��n�̏���
         zg!!.tiling(sp!!.getBoolean("prefUseTiling", false))
         checkDarkness()
         mapManager.mapId = zSystem!!.mapId()
@@ -868,7 +878,6 @@ class MainActivity : AppCompatActivity() {
             }
             bmgr!!.dataChanged() // backup it!!
         } catch (e: FileNotFoundException) {
-            // TODO �����������ꂽ catch �u���b�N
             e.printStackTrace()
         } catch (e: IOException) {
             e.printStackTrace()
@@ -893,12 +902,10 @@ class MainActivity : AppCompatActivity() {
                     genders,
                     0
                 ) { dialog: DialogInterface?, which: Int ->
-                    // TODO �����������ꂽ���\�b�h�E�X�^�u
                     userData!!.fact[0] = which + 1
                 }.setPositiveButton(
                     string.label_okay
                 ) { dialog: DialogInterface?, which: Int ->
-                    // TODO �����������ꂽ���\�b�h�E�X�^�u
                     if (userData!!.fact[0] == 0) {
                         userData!!.fact[0] = 1
                     }
@@ -907,14 +914,11 @@ class MainActivity : AppCompatActivity() {
                 }.setNegativeButton(
                     string.label_cancel
                 ) { dialog: DialogInterface?, which: Int ->
-                    // TODO �����������ꂽ���\�b�h�E�X�^�u
                     userData!!.fact[0] = 0
                     dismissDialog()
-                }
-                    .setOnCancelListener { dialog: DialogInterface? ->
-                        // TODO �����������ꂽ���\�b�h�E�X�^�u
-                        dismissDialog()
-                    }.show()
+                }.setOnCancelListener { dialog: DialogInterface? ->
+                    dismissDialog()
+                }.show()
             }
 
             1 -> {
@@ -924,12 +928,10 @@ class MainActivity : AppCompatActivity() {
                     files,
                     0
                 ) { dialog: DialogInterface?, which: Int ->
-                    // TODO �����������ꂽ���\�b�h�E�X�^�u
                     fileno = which + 1
                 }.setPositiveButton(
                     string.label_okay
                 ) { dialog: DialogInterface?, which: Int ->
-                    // TODO �����������ꂽ���\�b�h�E�X�^�u
                     if (fileno == 0) {
                         fileno = 1
                     }
@@ -942,13 +944,10 @@ class MainActivity : AppCompatActivity() {
                 }.setNegativeButton(
                     string.label_cancel
                 ) { dialog: DialogInterface?, which: Int ->
-                    // TODO �����������ꂽ���\�b�h�E�X�^�u
                     dismissDialog()
-                }
-                    .setOnCancelListener { dialog: DialogInterface? ->
-                        // TODO �����������ꂽ���\�b�h�E�X�^�u
-                        dismissDialog()
-                    }.show()
+                }.setOnCancelListener { dialog: DialogInterface? ->
+                    dismissDialog()
+                }.show()
             }
 
             2 -> {
@@ -967,11 +966,9 @@ class MainActivity : AppCompatActivity() {
                         .setMessage(string.item_nothing).setPositiveButton(
                             string.label_okay
                         ) { dialog: DialogInterface?, which: Int ->
-                            // TODO �����������ꂽ���\�b�h�E�X�^�u
                             dismissDialog()
                         }
                         .setOnCancelListener { dialog: DialogInterface? ->
-                            // TODO �����������ꂽ���\�b�h�E�X�^�u
                             dismissDialog()
                         }.show()
                 } else {
@@ -980,11 +977,9 @@ class MainActivity : AppCompatActivity() {
                         .setItems(has.toArray<String?>(tmp), null).setPositiveButton(
                             string.label_okay
                         ) { dialog: DialogInterface?, which: Int ->
-                            // TODO �����������ꂽ���\�b�h�E�X�^�u
                             dismissDialog()
                         }
                         .setOnCancelListener { dialog: DialogInterface? ->
-                            // TODO �����������ꂽ���\�b�h�E�X�^�u
                             dismissDialog()
                         }.show()
                 }
@@ -997,27 +992,22 @@ class MainActivity : AppCompatActivity() {
                     lines,
                     0
                 ) { dialog: DialogInterface?, which: Int ->
-                    // TODO �����������ꂽ���\�b�h�E�X�^�u
                     cutline = which
                 }.setPositiveButton(
                     string.label_okay
                 ) { dialog: DialogInterface?, which: Int ->
-                    // TODO �����������ꂽ���\�b�h�E�X�^�u
                     if (cutline < 0) {
                         cutline = 0
                     }
                     if (userData!!.place[11] != 0xff) {
-                        // �y���`�������Ă��Ȃ��̂Ő؂�܂���
                         msgout(0xe0)
                     }
                     if (cutline == 0 || userData!!.place[11] != 0xff) {
-                        // ���s
                         setColorFilter(CF_MODE_RED)
                         msgout(0xc7)
                         msgByResId(string.msg_gameover)
                         gameOver()
                     } else {
-                        // ����
                         userData!!.place[11] = 0
                         zSystem!!.mapId(74)
                         // play sound #3
@@ -1026,13 +1016,10 @@ class MainActivity : AppCompatActivity() {
                 }.setNegativeButton(
                     string.label_cancel
                 ) { dialog: DialogInterface?, which: Int ->
-                    // TODO �����������ꂽ���\�b�h�E�X�^�u
                     dismissDialog()
-                }
-                    .setOnCancelListener { dialog: DialogInterface? ->
-                        // TODO �����������ꂽ���\�b�h�E�X�^�u
-                        dismissDialog()
-                    }.show()
+                }.setOnCancelListener { dialog: DialogInterface? ->
+                    dismissDialog()
+                }.show()
             }
 
             else -> dialogId = -1
@@ -1116,11 +1103,12 @@ class MainActivity : AppCompatActivity() {
             return  // skip
         }
         checkTeacher()
-        draw(true)
+        if (!cleared) {
+            draw(true)
+        }
     }
 
     override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        // TODO �����������ꂽ���\�b�h�E�X�^�u
         val inflater = menuInflater
         inflater.inflate(R.menu.menu, menu)
         return super.onCreateOptionsMenu(menu)
