@@ -159,7 +159,7 @@
     <string name="pref_summary_playsound">ゲーム中で音楽を再生する。</string>
     <string name="title_about">このプログラムについて</string>
     <string name="msg_about">ハイハイスクールアドベンチャー\nVersion %1$s\n\nCopyright©1985
-		ZOBplus\nCopyright©2002-2025 ZOBPlus hiro</string>
+		ZOBplus\nCopyright©2002-2026 ZOBPlus hiro</string>
 
     <string name="label_skip">スキップ</string>
     <string name="pref_skip_opening">オープニング</string>
